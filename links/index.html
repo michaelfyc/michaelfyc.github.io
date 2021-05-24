@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.gravatar.com/avatar/41c77e83ef49498d7ee92b899cc7433b?s=160">
 <meta property="article:published_time" content="2020-02-16T08:07:22.000Z">
-<meta property="article:modified_time" content="2020-04-08T12:31:23.646Z">
+<meta property="article:modified_time" content="2021-05-24T06:03:22.227Z">
 <meta property="article:author" content="Michael">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gravatar.com/avatar/41c77e83ef49498d7ee92b899cc7433b?s=160">
@@ -30,7 +30,7 @@
 <link rel="stylesheet" href="../theme.124091e6a3615c8e2ea7.css">
 
 
-<script src="../config.19f6ae533fa370dd92a5.js"></script>
+<script src="../config.dace26b41f672ccd0b04.js"></script>
 
 
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -39,6 +39,28 @@
 <script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js"></script>
 <script type="text/javascript" async>window.onload=()=>{window.dispatchEvent(new Event("resize"));};</script>
+<script type="text/javascript">function Elaina(obj) {
+    let host = obj.host.replace(/\/+$/, '');
+    let uid = obj.uid;
+    let el = obj.el;
+    let language = obj.language;
+    let height = obj.height;
+
+    let frame = document.createElement('iframe');
+    frame.src = host + '/r/' + uid;
+    frame.width = '100%';
+    frame.height = height;
+    frame.frameBorder = 0;
+    frame.onload = () => {
+        frame.contentWindow.postMessage({
+            type: 'elaina',
+            language: language,
+        }, host)
+    }
+
+    let elainaElement = document.getElementById(el);
+    elainaElement.appendChild(frame);
+}</script>
 <script src="runtime.1720a40670866f12654e.js"></script>
 <script src="polyfills.69a7b8a907a7ac9da988.js"></script>
 <script src="main.afaf3882c4354b8bfcf3.js"></script>
